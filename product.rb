@@ -5,6 +5,18 @@ class Product
     @tax_rate = tax_rate
   end
 
+  def name
+    @name
+  end
+
+  def price
+    @price
+  end
+
+  def tax_rate
+    @tax_rate
+  end
+
   def total_price
     total_price = @price * (1 + @tax_rate)
   end
