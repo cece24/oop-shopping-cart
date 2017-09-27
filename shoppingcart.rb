@@ -33,6 +33,13 @@ class ShoppingCart
   end
 
   #total cost of all cart_items after tax
+  def total_with_tax
+    total = 0
+    @cart_items.each do |item|
+      total += item.total_price
+    end
+    return total
+  end
 end
 
 my_cart = ShoppingCart.new
@@ -45,4 +52,5 @@ puts my_cart.cart_items.inspect
 my_cart.remove_product("chicken")
 puts my_cart.cart_items.inspect
 
-puts my_cart.total_before_tax
+puts "Total before tax is #{my_cart.total_before_tax}"
+puts "Total with tax is #{my_cart.total_with_tax}"
