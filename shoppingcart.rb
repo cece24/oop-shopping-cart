@@ -22,7 +22,15 @@ class ShoppingCart
       item.name != name
     end
   end
+
   #total cost of all cart_items before tax
+  def total_before_tax
+    total = 0
+    @cart_items.each do |item|
+      total += item.price
+    end
+    return total
+  end
 
   #total cost of all cart_items after tax
 end
@@ -36,3 +44,5 @@ puts my_cart.cart_items.inspect
 
 my_cart.remove_product("chicken")
 puts my_cart.cart_items.inspect
+
+puts my_cart.total_before_tax
