@@ -10,7 +10,7 @@ class Product
   end
 end
 
-cheese = Product.new("cheese", 3.99, 0.15)
-puts cheese.inspect
-
-puts cheese.total_price
+# cheese = Product.new("cheese", 3.99, 0.15)
+# puts cheese.inspect
+#
+# puts cheese.total_price
